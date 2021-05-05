@@ -21,6 +21,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importStar(require("express"));
 const routes_1 = require("../routes");
+const front_routes_1 = require("../routes/front-routes");
 class App {
     constructor() {
         this.app = express_1.default();
@@ -34,6 +35,7 @@ class App {
         routes_1.apiRoutes.forEach(route => {
             new route().route(this.app, '/api');
         });
+        new front_routes_1.FrontRoutes().route(this.app, '*');
     }
 }
 exports.default = new App().app;
