@@ -23,9 +23,9 @@ export class FrontRoutes {
     public route(app: Application, _path: string) {
         app.get(`${_path}` , (req: Request, res: Response) => {
             if (allowedExt.filter(ext => req.url.indexOf(ext) > 0).length > 0) {
-                res.sendFile(path.join(__dirname, `/../../client/build/${req.url}`));
+                res.sendFile(path.join(__dirname, '..', '..' ,`client/build/${req.url}`));
               } else {
-                res.sendFile(path.join(__dirname, '/../../client/build/index.html'));
+                res.sendFile(path.join(__dirname,  '..', '..', 'client/build/index.html'));
               }
         });
     }
