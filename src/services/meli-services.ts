@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { DetailServiceResponse } from '../response/detail/detail-service.interface';
+import { DetailCategoryServiceResponse, DetailServiceResponse } from '../response/detail/detail-service.interface';
 import { SearchServiceInterface } from '../response/search/search-service.interface';
 
 
