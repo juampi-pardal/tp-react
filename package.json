@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "tsc && node ./dist/server.js",
+    "start": "node ./dist/server.js",
     "test": "ts-node ./lib/server.ts",
     "dev": "tsc &&  ./dist/server.js",
     "prod": "tsc &&  ./dist/server.js"
